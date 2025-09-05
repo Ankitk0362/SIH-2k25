@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Botanical Traceability — Home</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+<h1>AyurBot Trace</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="farmer.html">Collector</a>
+<a href="lab.html">Lab</a>
+<a href="manufacturer.html">Manufacturer</a>
+<a href="trace.html">Trace / Verify</a>
+</nav>
+</header>
+
+
+<main class="container">
+<section class="hero">
+<h2>Botanical traceability for Ayurvedic herbs</h2>
+<p>Geo-tag, test, batch and mint an immutable trace record (simulated blockchain tx) — then share via QR on final product labels.</p>
+<div class="cta-row">
+<a class="btn" href="farmer.html">Start a collection</a>
+<a class="btn ghost" href="manufacturer.html">Create batch & QR</a>
+</div>
+</section>
+
+
+<section class="features">
+<article>
+<h3>Collectors / Farmers</h3>
+<p>Record geo-location, species, quantity & collection method (wild/farm).</p>
+</article>
+<article>
+<h3>Labs</h3>
+<p>Attach lab test results and certificate details to a collected lot.</p>
+</article>
+<article>
+<h3>Manufacturers</h3>
+<p>Assemble lots into formulation batches, generate QR + simulated blockchain proof.</p>
+</article>
+</section>
+
+
+<section class="notes">
+<h4>Note</h4>
+<p>This frontend uses localStorage as a mock backend and simulates blockchain transactions. Replace <code>api.js</code> endpoints with your real backend / smart contract calls when ready.</p>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<small>© AyurBot Trace — Prototype</small>
+</footer>
+
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+</body>
+</html>

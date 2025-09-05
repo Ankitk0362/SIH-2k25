@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturer Dashboard</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="farmer.html">Collector</a>
+    <a href="lab.html">Lab</a>
+    <a href="trace.html">Trace</a>
+  </nav>
+
+  
+  <main class="container">
+
+    
+    <form id="batchForm" class="card">
+      <h2>Create Formulation Batch</h2>
+
+      <label>Batch Name / Code
+        <input id="batchName" required placeholder="e.g. BATCH-WS-001" />
+      </label>
+
+      <label>Lot IDs (comma separated)
+        <input id="lotIds" placeholder="collection IDs used in this batch" />
+      </label>
+
+      <label>Final Quantity (kg)
+        <input id="batchQty" type="number" step="0.01" />
+      </label>
+
+      <label>Manufacturer
+        <input id="manufacturer" />
+      </label>
+
+      <div class="actions">
+        <button class="btn" type="submit">Create Batch & Simulate On-Chain Mint</button>
+      </div>
+
+      <p id="batchStatus" class="muted"></p>
+    </form>
+
+    
+    <section class="card" id="batchResult" style="display:none;">
+      <h3>Batch Created</h3>
+      <p><strong>Batch ID:</strong> <span id="batchIdOut"></span></p>
+      <p><strong>Simulated Tx Hash:</strong> <span id="txHashOut"></span></p>
+
+      <div>
+        <canvas id="qrCanvas"></canvas>
+      </div>
+
+      <a id="downloadQr" class="btn" download="batch-qrcode.png">Download QR</a>
+    </section>
+
+    
+    <section class="card">
+      <h3>Recent Batches</h3>
+      <ul id="batchList"></ul>
+    </section>
+  </main>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/manufacturer.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+body {
+  background: linear-gradient(135deg, #e6ffe6, #cce3ff); 
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+
+
+.card {
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(6px); 
+}
+
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1b4332;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.4rem;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #40916c;
+  box-shadow: 0 0 6px rgba(64, 145, 108, 0.4);
+  outline: none;
+  background: #f0fff4;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: #1b4332;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background: #40916c;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #1b4332;
+  color: #1b4332;
+}
+
+.btn.ghost:hover {
+  background: #1b4332;
+  color: #fff;
+}
+
+
+.geo-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.geo-row input {
+  flex: 1;
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+
+.muted {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+
+#recentCollections h3 {
+  color: #2d6a4f;
+  margin-bottom: 1rem;
+}
+
+#collectionsList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#collectionsList li {
+  background: #e9fce9;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  border-left: 4px solid #40916c;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#collectionsList li:hover {
+  transform: translateX(5px);
+  background: #d9f9d9;
+}

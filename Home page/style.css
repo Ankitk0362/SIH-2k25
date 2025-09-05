@@ -1,0 +1,158 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f8fff8, #e6ffe6);
+  color: #222;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: #1b4332;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.site-header nav a {
+  color: #d8f3dc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+  color: #95d5b2;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f0fff4;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #1b4332;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: #1b4332;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #40916c;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #1b4332;
+  color: #1b4332;
+}
+
+.btn.ghost:hover {
+  background: #1b4332;
+  color: #fff;
+}
+
+.features {
+  margin: 3rem 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.features article {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+}
+
+.features h3 {
+  color: #2d6a4f;
+  margin-bottom: 0.8rem;
+}
+
+.features p {
+  color: #444;
+}
+
+
+.notes {
+  background: #fffbe6;
+  padding: 1.5rem;
+  border-left: 5px solid #ffb703;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.notes h4 {
+  margin-bottom: 0.6rem;
+  color: #bb3e03;
+}
+
+.notes code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+
+.site-footer {
+  background: #1b4332;
+  color: #d8f3dc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

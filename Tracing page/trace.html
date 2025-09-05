@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Trace / Verify</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="trace.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Trace — Verify a Batch</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="farmer.html">Collector</a>
+    <a href="lab.html">Lab</a>
+    <a href="manufacturer.html">Manufacturer</a>
+  </nav>
+</header>
+
+<main class="container">
+  
+  <section class="card">
+    <h2>Enter Batch ID or paste QR payload</h2>
+    <input id="traceInput" placeholder="Batch ID or QR payload" />
+    <div class="actions">
+      <button id="traceBtn" class="btn">Trace</button>
+    </div>
+  </section>
+
+  
+  <section id="traceResult" class="card">
+    <h3>Provenance</h3>
+    <div id="timeline">
+      <p>🌿 Collected by Farmer — Collection ID: COL-123</p>
+      <p>🧪 Lab Test Completed — Result: Passed</p>
+      <p>🏭 Batch Created — Batch ID: BATCH-WS-001</p>
+      <p>⛓️ Stored on Blockchain</p>
+    </div>
+
+    <h4>Blockchain Proof</h4>
+    <p id="proof">0x9af4c1d8b27a5e3d92c1a8f7b3c2dbe91f3a9a4e6b5c7d2f9e1b3c7d9f2a1b4</p>
+  </section>
+</main>
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/trace.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Results</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="farmer.html">Collector</a>
+    <a href="manufacturer.html">Manufacturer</a>
+    <a href="trace.html">Trace</a>
+  </nav>
+
+  
+  <main class="container">
+
+    
+    <form id="labForm" class="card">
+      <h2>Attach test result to collection</h2>
+
+      <label>Collection ID
+        <input id="collectionId" required placeholder="Paste collection ID" />
+      </label>
+
+      <label>Test Type
+        <select id="testType">
+          <option>Pesticide Residue</option>
+          <option>Microbial</option>
+          <option>Moisture</option>
+          <option>Identity (DNA/Marker)</option>
+        </select>
+      </label>
+
+      <label>Result Summary
+        <textarea id="resultSummary"></textarea>
+      </label>
+
+      <label>Lab Technician
+        <input id="technician" />
+      </label>
+
+      <div class="actions">
+        <button class="btn" type="submit">Save Test</button>
+      </div>
+
+      <p id="labStatus" class="muted"></p>
+    </form>
+
+    
+    <section class="card">
+      <h3>Recent Lab Results</h3>
+      <ul id="labList"></ul>
+    </section>
+  </main>
+
+  
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/lab.js"></script>
+</body>
+</html>

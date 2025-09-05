@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collector — New Herb Collection</title>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="site-header">
+    <h1>Collector — New Herb Collection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lab.html">Lab</a>
+      <a href="manufacturer.html">Manufacturer</a>
+      <a href="trace.html">Trace</a>
+    </nav>
+  </header>
+
+  
+  <main class="container">
+    <form id="collectorForm" class="card">
+      <h2>Record a collection</h2>
+
+      <label>Collector Name
+        <input required name="collectorName" id="collectorName" placeholder="Name or ID" />
+      </label>
+
+      <label>Species / Herb Name
+        <input required name="species" id="species" placeholder="e.g. Withania somnifera" />
+      </label>
+
+      <label>Quantity (kg)
+        <input required type="number" step="0.01" name="quantity" id="quantity" />
+      </label>
+
+      <label>Collection Type
+        <select id="collectionType" name="collectionType">
+          <option value="wild">Wild</option>
+          <option value="farm">Farm</option>
+        </select>
+      </label>
+
+      <label>Notes
+        <textarea id="notes" name="notes" placeholder="Any notes..."></textarea>
+      </label>
+
+      <div class="geo-row">
+        <button type="button" id="getGeo" class="btn">Get Geo-Location</button>
+        <input readonly id="geo" placeholder="Lat, Lon" />
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Save Collection</button>
+        <button id="saveDraft" type="button" class="btn ghost">Save Draft (no geo)</button>
+      </div>
+
+      <p id="status" class="muted"></p>
+    </form>
+
+    <section class="card" id="recentCollections">
+      <h3>Recent collections</h3>
+      <ul id="collectionsList"></ul>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <small>© AyurBot Trace — Prototype</small>
+  </footer>
+
+  
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/farmer.js"></script>
+</body>
+</html>
